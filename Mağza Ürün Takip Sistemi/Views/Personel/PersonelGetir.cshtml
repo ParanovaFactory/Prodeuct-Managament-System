@@ -1,0 +1,24 @@
+﻿@model Mağza_Ürün_Takip_Sistemi.Models.Entity.tblpersonel
+
+@{
+    ViewBag.Title = "PersonelGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("PersonelGuncelle", "Personel", FormMethod.Post))
+{
+    <h2>Personel Güncelleme</h2>
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <label>Personel Adı</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    <label>Personel Soyadı</label>
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    <label>Personel Departmanı</label>
+    @Html.TextBoxFor(x => x.Departman, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning" style="margin-top:15px">Güncelle</button>
+}
+
+

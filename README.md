@@ -1,1 +1,1 @@
-# Mvc5-r-n-Takip-Platformu
+# Mvc 5 Oyuncu Ürünleri Takip Ve Destek Platformu

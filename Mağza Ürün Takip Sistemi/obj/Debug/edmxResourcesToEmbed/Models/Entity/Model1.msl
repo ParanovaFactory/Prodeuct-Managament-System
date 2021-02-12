@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbMağzaModelStoreContainer" CdmEntityContainer="DbMağzaEntities">
+    <EntitySetMapping Name="tblkategori">
+      <EntityTypeMapping TypeName="DbMağzaModel.tblkategori">
+        <MappingFragment StoreEntitySet="tblkategori">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblmusteri">
+      <EntityTypeMapping TypeName="DbMağzaModel.tblmusteri">
+        <MappingFragment StoreEntitySet="tblmusteri">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Sehir" ColumnName="Sehir" />
+          <ScalarProperty Name="Bakiye" ColumnName="Bakiye" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpersonel">
+      <EntityTypeMapping TypeName="DbMağzaModel.tblpersonel">
+        <MappingFragment StoreEntitySet="tblpersonel">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="Departman" ColumnName="Departman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblsatislar">
+      <EntityTypeMapping TypeName="DbMağzaModel.tblsatislar">
+        <MappingFragment StoreEntitySet="tblsatislar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Urun" ColumnName="Urun" />
+          <ScalarProperty Name="Personel" ColumnName="Personel" />
+          <ScalarProperty Name="Musteri" ColumnName="Musteri" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblurunler">
+      <EntityTypeMapping TypeName="DbMağzaModel.tblurunler">
+        <MappingFragment StoreEntitySet="tblurunler">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Marka" ColumnName="Marka" />
+          <ScalarProperty Name="Stok" ColumnName="Stok" />
+          <ScalarProperty Name="AlısFiyat" ColumnName="AlısFiyat" />
+          <ScalarProperty Name="SatisFiyat" ColumnName="SatisFiyat" />
+          <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbladmin">
+      <EntityTypeMapping TypeName="DbMağzaModel.tbladmin">
+        <MappingFragment StoreEntitySet="tbladmin">
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

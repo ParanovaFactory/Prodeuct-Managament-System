@@ -1,0 +1,41 @@
+﻿@model Mağza_Ürün_Takip_Sistemi.Models.Entity.tblurunler
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <h2>Yeni Ürün Ekleme</h2>
+    <br />
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <label>Ürün Adı</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Ad, "Ad Alanı Boş Bırakılamaz", new { @style = "color:green" })
+
+    <br />
+    <label>Marka</label>
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Marka, "Marka Alanı Boş Bırakılamaz", new { @style = "color:green" })
+
+    <br />
+    <label>Stok</label>
+    @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Stok, "Stok Alanı Boş Bırakılamaz", new { @style = "color:green" })
+
+    <br />
+    <label>Alış Fiyat</label>
+    @Html.TextBoxFor(x => x.AlısFiyat, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.AlısFiyat, "Alış Fiyat Alanı Boş Bırakılamaz", new { @style = "color:green" })
+
+    <br />
+    <label>Satış Fiyatı</label>
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SatisFiyat, "Satış Fiyat Alanı Boş Bırakılamaz", new { @style = "color:green" })
+
+    <br />
+    <label>Kategori</label>
+    @Html.DropDownListFor(x => x.tblkategori.Id, (List<SelectListItem>)
+    ViewBag.drop, new { @class = "form-control" })
+    <button class="btn btn-info" style="margin-top:15px">Ürün Ekle</button>
+</form>
+

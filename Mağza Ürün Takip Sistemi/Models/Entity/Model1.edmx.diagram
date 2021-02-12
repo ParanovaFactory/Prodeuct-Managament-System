@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="785f51d2abdc4c89b1826cb23bbf8989" Name="Diagram1">
+        <EntityTypeShape EntityType="DbMağzaModel.tblkategori" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMağzaModel.tblmusteri" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMağzaModel.tblpersonel" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMağzaModel.tblsatislar" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMağzaModel.tblurunler" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="DbMağzaModel.FK_tblurunler_tblkategori" ManuallyRouted="false" />
+        <AssociationConnector Association="DbMağzaModel.FK_tblsatislar_tblmusteri" ManuallyRouted="false" />
+        <AssociationConnector Association="DbMağzaModel.FK_tblsatislar_tblpersonel" ManuallyRouted="false" />
+        <AssociationConnector Association="DbMağzaModel.FK_tblsatislar_tblurunler" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbMağzaModel.tbladmin" Width="1.5" PointX="0.875" PointY="3.125" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

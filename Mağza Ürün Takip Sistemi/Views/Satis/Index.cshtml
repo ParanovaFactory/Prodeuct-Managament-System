@@ -1,0 +1,38 @@
+﻿@using Mağza_Ürün_Takip_Sistemi.Models.Entity
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<tblsatislar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Ürün</th>
+        <th>Personel</th>
+        <th>Müşteri</th>
+        <th>Fiyat</th>
+        <th>Tarih</th>
+        <th>İşlemler</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.tblurunler.Ad</td>
+            <td>@x.tblpersonel.Ad  @x.tblpersonel.Soyad</td>
+            <td>@x.tblmusteri.Ad @x.tblmusteri.Soyad</td>
+            <td>@x.tblurunler.SatisFiyat</td>
+            <td>@x.Tarih</td>
+            <td><a href="/Satis/SatisSil/@x.Id" class="btn btn-danger">Sil</a>
+            <a href="/Satis/SatisGetir/@x.Id" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
+
+<a href="/Satis/YeniSatis" class="btn btn-primary">Yeni Satış</a>
+

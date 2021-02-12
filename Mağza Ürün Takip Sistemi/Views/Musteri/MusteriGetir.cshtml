@@ -1,0 +1,26 @@
+﻿@model Mağza_Ürün_Takip_Sistemi.Models.Entity.tblmusteri
+@{
+    ViewBag.Title = "MusteriGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("MusteriGuncelle", "Musteri", FormMethod.Post))
+{
+    <h2>Müşteri Bilgi Güncelleme</h2>
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Adı</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Soyadı</label>
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    <label>Şehir</label>
+    @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control" })
+    <br />
+    <label>Bakiye</label>
+    @Html.TextBoxFor(x => x.Bakiye, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning" style="margin-top:15px">Güncelle</button>
+}
+

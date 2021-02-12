@@ -1,0 +1,27 @@
+﻿@model Mağza_Ürün_Takip_Sistemi.Models.Entity.tblpersonel
+@{
+    ViewBag.Title = "YeniPersonel";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <h2>Yeni Personel Ekleme</h2>
+    <br />
+    <label>Personel Adı</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Ad, "Ad Alanı Boş Bırakılamaz", new { @style = "color:green" })
+
+    <br />
+    <label>Personel Soyadı</label>
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Soyad, "Soyad Alanı Boş Bırakılamaz", new { @style = "color:green" })
+
+    <br />
+    <label>Departman</label>
+    @Html.TextBoxFor(x => x.Departman, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Departman, "Departman Alanı Boş Bırakılamaz", new { @style = "color:green" })
+
+    <br />
+    <button class="btn btn-info" style="margin-top:15px">Kaydet</button>
+</form>
+

@@ -1,0 +1,28 @@
+﻿@model Mağza_Ürün_Takip_Sistemi.Models.Entity.tblsatislar
+
+@{
+    ViewBag.Title = "SatisGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("SatisGuncelle", "Satis", FormMethod.Post))
+{
+    <h2>Satış Güncelleme</h2>
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <label>Ürün Id</label>
+    @Html.TextBoxFor(x => x.Urun, new { @class = "form-control" })
+    <br />
+    <label>Personel Id</label>
+    @Html.TextBoxFor(x => x.Personel, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Id</label>
+    @Html.TextBoxFor(x => x.Musteri, new { @class = "form-control" })
+    <br />
+    <label>Tarih</label>
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-warning" style="margin-top:15px">Güncelle</button>
+}
+
+

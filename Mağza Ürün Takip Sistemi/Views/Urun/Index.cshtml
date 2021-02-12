@@ -1,0 +1,56 @@
+﻿@using Mağza_Ürün_Takip_Sistemi.Models.Entity
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList < tblurunler >
+@*@model List<tblurunler>*@
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@*@using (Html.BeginForm("Index", "Urun", FormMethod.Get))
+{
+    <p>
+        Ürün Adı:@Html.TextBox("p");
+        <input type="submit" value="Ara" />
+    </p>
+}*@
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Ürün Adı</th>
+        <th>Marka</th>
+        <th>Stok</th>
+        <th>Alış Fiyatı</th>
+        <th>Satış Fiyatı</th>
+        <th>Kategori</th>
+        <th>Stok Dururmu</th>
+        <th>Ürün Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Ad</td>
+            <td>@x.Marka</td>
+            <td>@x.Stok</td>
+            <td>@x.AlısFiyat</td>
+            <td>@x.SatisFiyat</td>
+            <td>@x.tblkategori.Ad</td>
+            <td>
+                @x.Durum
+                <a href="/Urun/UrunKaldır/@x.Id" class="btn btn-danger">Yok</a>
+                <a href="/Urun/UrunEkle/@x.Id" class="btn btn-danger">Var</a>
+            </td>
+            <td><a href="/Urun/UrunSil/@x.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Urun/UrunGetir/@x.Id" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
+
+<a href="/Urun/YeniUrun" class="btn btn-primary">Yeni Ürün Girişi</a>
+
+

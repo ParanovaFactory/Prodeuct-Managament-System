@@ -1,0 +1,16 @@
+﻿@model Mağza_Ürün_Takip_Sistemi.Models.Entity.tblkategori
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("KategoriGuncelle", "Kategori", FormMethod.Post))
+{
+    <h2>Kategori Güncelleme</h2>
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <label>Kategori Adı</label>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning" style="margin-top:15px">Güncelle</button>
+}
+
